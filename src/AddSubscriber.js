@@ -19,12 +19,20 @@ class AddSubscriber extends Component {
         //console.log(state);
     }
 
+
+    formSubmitted = (e) => {
+        e.preventDefault();
+        this.props.addSubscriberHandler(this.state);
+        this.setState({id:0,name:'',phone:''});
+        console.log('form submitted clicked')
+    }
+
     render() {
         return <div>
             <Header heading="Add Subscriber" />
             <div className="inner-container-component">
                 <button className="back-btn">Back</button>
-                <form>
+                <form onSubmit={this.formSubmitted}>
                     <label htmlFor="name" className="form-lbl">Name: </label><br/>
                     <input type="text" id="name" className="form-text-input" name="name" onChange={this.inputChangeHandler}></input><br/><br/>
                     <label htmlFor="phone" className="form-lbl">Phone: </label><br/>

@@ -1,5 +1,5 @@
 import Header from './Header';
-import './App.css';
+import './ShowSubscribers.css';
 import React,{Component} from 'react';
 // function App() {
 //   var subscribers = [
@@ -41,7 +41,7 @@ import React,{Component} from 'react';
 
 
 
-class App extends Component{
+class ShowSubscribers extends Component{
 
 
   constructor() {
@@ -96,5 +96,5 @@ class App extends Component{
   }
 }
 
-export default App;
+export default ShowSubscribers;
 
