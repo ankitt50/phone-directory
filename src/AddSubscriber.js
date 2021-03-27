@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Header from './Header';
 import './AddSubscriber.css';
+import {Link} from 'react-router-dom';
 class AddSubscriber extends Component {
 
     constructor() {
@@ -24,14 +25,15 @@ class AddSubscriber extends Component {
         e.preventDefault();
         this.props.addSubscriberHandler(this.state);
         this.setState({id:0,name:'',phone:''});
-        console.log('form submitted clicked')
+        // console.log('form submitted clicked')
+        this.props.history.push("/");
     }
 
     render() {
         return <div>
             <Header heading="Add Subscriber" />
             <div className="inner-container-component">
-                <button className="back-btn">Back</button>
+                <Link to="/"><button className="back-btn">Back</button></Link>
                 <form onSubmit={this.formSubmitted}>
                     <label htmlFor="name" className="form-lbl">Name: </label><br/>
                     <input type="text" id="name" className="form-text-input" name="name" onChange={this.inputChangeHandler}></input><br/><br/>

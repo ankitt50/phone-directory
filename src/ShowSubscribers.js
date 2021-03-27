@@ -1,6 +1,7 @@
 import Header from './Header';
 import './ShowSubscribers.css';
 import React,{Component} from 'react';
+import {Link} from 'react-router-dom';
 // function App() {
 //   var subscribers = [
 //     {
@@ -44,13 +45,13 @@ import React,{Component} from 'react';
 class ShowSubscribers extends Component{
 
 
-  constructor() {
-    super();
-    this.state = {
-      subscribers: [
-      ]
-    }
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     subscribers: [
+  //     ]
+  //   }
+  // }
 
   clickHandler(message) {
     alert(message);
@@ -74,14 +75,14 @@ class ShowSubscribers extends Component{
     return (
       <div>
         <Header heading="Phone Directory"/>
-        <button id="add-btn">Add</button>
+        <Link to="/add"><button id="add-btn">Add</button></Link>
         <div className="sub-heading">
           <span className="name-heading">Name</span>
           <span className="number-heading">Phone</span>
         </div>
   
   {
-  this.state.subscribers.map(
+  this.props.subscribers.map(
     sub => {
       return <div key={sub.id} className="sub-heading">
       <span className="name-heading">{sub.name}</span>
