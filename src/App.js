@@ -43,24 +43,33 @@ import React,{Component} from 'react';
 
 class App extends Component{
 
+
+  constructor() {
+    super();
+    this.state = {
+      subscribers: [
+      ]
+    }
+  }
+
   clickHandler(message) {
     alert(message);
   }
 
   render() {
 
-    var subscribers = [
-      {
-        id: 1,
-        name: "Shilpa",
-        phone: "9999999999"
-      },
-      {
-        id: 2,
-        name: "Srishti",
-        phone: "8888888888"
-      }
-    ];
+    // var subscribers = [
+    //   {
+    //     id: 1,
+    //     name: "Shilpa",
+    //     phone: "9999999999"
+    //   },
+    //   {
+    //     id: 2,
+    //     name: "Srishti",
+    //     phone: "8888888888"
+    //   }
+    // ];
 
     return (
       <div>
@@ -72,7 +81,7 @@ class App extends Component{
         </div>
   
   {
-  subscribers.map(
+  this.state.subscribers.map(
     sub => {
       return <div key={sub.id} className="sub-heading">
       <span className="name-heading">{sub.name}</span>
