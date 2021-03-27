@@ -53,8 +53,10 @@ class ShowSubscribers extends Component{
   //   }
   // }
 
-  clickHandler(message) {
-    alert(message);
+  clickHandler(toDeleteSubscriberId) {
+    // alert(message);
+    this.props.deleteSubscriber(toDeleteSubscriberId);
+    console.log('to be deleted id: '+toDeleteSubscriberId);
   }
 
   render() {
@@ -87,7 +89,7 @@ class ShowSubscribers extends Component{
       return <div key={sub.id} className="sub-heading">
       <span className="name-heading">{sub.name}</span>
       <span className="number-heading">{sub.phone}</span>
-      <button className="delete-btn" onClick={this.clickHandler.bind(this,"Delete Clicked")}>Delete</button>
+      <button className="delete-btn" onClick={this.clickHandler.bind(this,sub.id)}>Delete</button>
     </div>;
     }
     )
