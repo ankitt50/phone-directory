@@ -1,0 +1,37 @@
+.add-subscriber-btn {
+    background-color: #7eca9c;
+    color: white;
+    padding: 6px 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: medium;
+}
+.back-btn {
+    background-color: #edeef7;
+    color: #3f3f44;
+    padding: 6px 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: medium;
+}
+.form-text-input{
+    margin-left: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: medium;
+    border: none; /* <-- This thing here to resolve extra black border appearing on the text field*/
+    border:solid 1px #ccc;
+    border-radius: 5px;
+}
+.form-lbl{
+    margin-left: 30px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+    font-size: medium;
+}
+.subscriber-to-be-added-div{
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
